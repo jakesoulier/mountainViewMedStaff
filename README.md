@@ -1,4 +1,4 @@
-Event/Calendar site for medstaff mountainview and ifch run in next.js with firebase
+Event/Calendar site for medstaff mountainview and ifch, run in next.js with firebase
 
 ## Getting Started
 
