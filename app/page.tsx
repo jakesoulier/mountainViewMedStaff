@@ -1,28 +1,39 @@
 import Announcement from "./components/announcement";
 import Header from "./components/header";
 import Events from "./components/events";
-import Calendar from "./components/calendarButtons";
+import CalendarButtons from "./components/calendarButtons";
 import CardLink from "./components/cardLink";
-import Footer from "./components/footer";
+import { EventsFetcherMountain, EventsFetcherIFCH, EventsMountainList } from "./eventsFetcher"; // Import both components
 
 export default function Home() {
+  console.log('Home component rendered');
+
   return (
     <main>
-      <Header/>
-      <div className="flex">
-        <div className="w-2/3"><Announcement /></div>
-        <div className="w-1/3 mr-3"><Events /></div>
+      
+      <Header title="Medical Staff" path="/" gradientColor="#1b284f" cmePath=""/>
+    
+      <div className="flex flex-col medium:flex-row">
+        <div className="announcement-wrapper">
+          <Announcement />
+        </div>
+
+        <div className="events-wrapper m-3">
+          <Events />
+        </div>
       </div>
-      <Calendar />
+      
       <div className="flex flex-wrap justify-center mt-10">
-        {/* <CardLink text="Doctor Search" /> */}
-        <CardLink text="Clinical Privileges" link="https://epriv.asm-cloud.com/app-4/login/mountain-view-hospital"/>
-        <CardLink text="UptoDate" link="https://www.uptodate.com/login" />
-        <CardLink text="Lexicomp" link="https://online.lexi.com/lco/action/home/switch"/>
-        <CardLink text="MD-Query" link="https://mdquery.com/app/login.aspx?ID=a3a86a89-6854-402d-9a80-01d834235daf"/>
-        <CardLink text="ARPACS" link="https://www.arpacs.net/"/>
+        <CalendarButtons />
+        {/* <CardLink text="Clinical Privileges" link="https://epriv.asm-cloud.com/app-4/login/mountain-view-hospital" imgSrc="/doctorClinical.jpg"/> */}
+        {/* <CardLink text="MD-Query" link="https://mdquery.com/app/login.aspx?ID=a3a86a89-6854-402d-9a80-01d834235daf" imgSrc="/md-query.jpg"/>
+        <CardLink text="UptoDate" link="https://www.uptodate.com/login" imgSrc="/uptodate.jpg"/>
+        <CardLink text="Lexicomp" link="https://online.lexi.com/lco/action/home/switch" imgSrc="/lexicomp.jpg"/>
+        <CardLink text="ARPACS" link="https://www.arpacs.net/" imgSrc="/arpacs.jpg"/> */}
+        <CardLink text="Continuing Education" link="/cme" imgSrc="/maleSquare.jpg"/>
+        <CardLink text="Med Staff" link="/secure" imgSrc="/doctorClinical.jpg"/>
+        <CardLink text="Residence" link="/" imgSrc="/residencePic.jpg"/>
       </div>
-      {/* <Footer /> */}
     </main>
   );
 }

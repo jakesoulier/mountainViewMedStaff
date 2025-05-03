@@ -12,4 +12,22 @@ export const EventSchema = z.object({
     day: z.string(),
     month: z.string(),
     time: z.string(),
+    type: z.string(),
+    link: z.string(),
+    email: z.string().email(),
+    company: z.string(),
 });
+
+export interface RegisterFormData {
+    name: string;
+    email: string;
+    textUpdates: string;
+    date: string;
+    phone: string;
+    calendarInvite: string;
+    license: string;
+    attendance: string;
+    updates: string;
+    knowledge: string;
+    title: string;
+  }

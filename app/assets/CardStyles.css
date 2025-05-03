@@ -1,0 +1,9 @@
+.card-link {
+    max-width: 190px;
+  }
+  
+  @media (max-width: 600px) {
+    .card-link {
+      max-width: 250px;
+    }
+  }

@@ -1,0 +1,74 @@
+.arrow-link {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .calendar-image {
+    display: block;
+    width: 100%; /* Ensure the image scales within the wrapper */
+    height: auto; /* Maintain the aspect ratio */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  }
+  
+  .arrow-link:hover .calendar-image {
+    opacity: 0; /* Hide the original image */
+  }
+  
+  .arrow-link:hover .hover-image {
+    opacity: 1; /* Show the hover image */
+  }
+  
+  .hover-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  }
+  
+  .arrow {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(900%, 140%);
+  }
+  
+  .arrow::before {
+    content: "";
+    height: 10px;
+    width: 40px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-120%, -50%);
+  }
+  
+  .arrow-link:hover .arrow {
+  animation: slide 1s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(900%, 140%) translateX(0);
+  }
+  50% {
+    transform: translate(900%, 140%) translateX(12px);
+  }
+  100% {
+    transform: translate(900%, 140%) translateX(0);
+  }
+}

@@ -8,9 +8,20 @@ html, body, main {
     padding: 0;
 }
 
+/* .banner-events {
+  flex-direction: row;
+} */
+
+/* @media screen and (max-width: 910px) {
+    .banner-events {
+      flex-direction: column;
+    }
+} */
+
 /* #main {
     height: 100%;
 } */
+ 
 
 .mount-calendar-icon {
     content: url('/mountainCalendarIcon-01.png');
@@ -49,3 +60,19 @@ html, body, main {
     background-color: #4A90E2; /* Change the background color of events */
     border-color: #4A90E2; /* Change the border color of events */
   }
+
+
+  .flex-container {
+    display: flex;
+    flex-direction: row; /* Change to row if you want them side by side */
+    /* align-items: center; Center items horizontally */
+    /* justify-content: center; Center items vertically */
+  }
+  
+  .announcement-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px; /* Space between announcement and events */
+  }
+
+

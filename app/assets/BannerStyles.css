@@ -1,0 +1,32 @@
+.slick-prev, .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    background-color: #376452; /* Change the background color to blue */
+    border-radius: 50%; /* Make the arrows circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slick-prev:hover, .slick-next:hover {
+    background-color: #79a17a; /* Change background color to red on hover */
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+    color: #1b274f; /* Change arrow icon color on hover */
+}
+
+  .slick-prev:before, .slick-next:before {
+    color: #c6d5eb; /* Change the arrow icon color to white */
+    font-size: 20px; /* Adjust the size of the arrow icon */
+  }
+  
+  
+  .slick-prev {
+    left: 10px; /* Adjust the position of the previous arrow */
+  }
+  
+  .slick-next {
+    right: 10px; /* Adjust the position of the next arrow */
+  }

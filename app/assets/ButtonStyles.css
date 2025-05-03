@@ -1,15 +1,23 @@
 /* ButtonStyles.css */
 .button {
-    background-color: #416855;
+    /* background-color: #416855; */
     color: white;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.2rem;
     border-radius: 0.25rem;
-    border: solid #416855;
+    
+    /* border: solid #416855; */
   }
   
   .button:hover {
     opacity: 0.8;
-    border: solid #2c4639;
+    /* border: solid #2c4639; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+
+@media (max-width: 600px) {
+    .button {
+        padding: .75rem 5rem;
+        font-size: large;
+    }
+}
